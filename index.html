@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRUD Firebase</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Cadastro de Usuários</h1>
-  
-  <form id="user-form">
-    <input type="text" id="nome" placeholder="Nome" required />
-    <input type="number" id="idade" placeholder="Idade" required />
-    <button type="submit">Salvar</button>
-    <button type="button" id="cancelar-edicao" hidden>Cancelar Edição</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Firebase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cadastro de Usuários</h1>
 
-  <ul id="lista-usuarios"></ul>
+    <form id="user-form">
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="number" id="idade" placeholder="Idade" required />
+      <button type="submit">Salvar</button>
+      <button type="button" id="cancelar-edicao" hidden>Cancelar Edição</button>
+    </form>
 
-  <script type="module" src="./js/main.js"></script>
-</body>
+    <ul id="lista-usuarios"></ul>
+
+    <script type="module" src="./js/main.js"></script>
+
+    <!-- duvida sobre o module? Isso diz ao navegador que:
+
+Esse script é um módulo JavaScript moderno, e não um script comum.
+
+Ele pode usar import e export para reutilizar código entre arquivos.
+
+O código será executado em modo estrito automaticamente ('use strict').
+
+As variáveis declaradas não vazam para o escopo global (mais seguro).
+
+Módulos só são carregados uma vez, mesmo que você os importe em vários lugares. -->
+  </body>
 </html>
