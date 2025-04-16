@@ -53,7 +53,18 @@ cancelarBtn.addEventListener("click", () => {
 lerUsuarios((usuarios) => {
   lista.innerHTML = ""; // Limpa a lista antes de mostrar novamente
   if (usuarios) {
+    
     // Converte objeto em array de pares [id, dados]
+    // Object.entries() é um método do JavaScript que transforma um objeto em um array de pares chave-valor.
+    // ex:
+    // const usuarios = {
+    //   id1: { nome: "João", idade: 18 },
+    //   id2: { nome: "Maria", idade: 20 }
+    // };
+
+    // const resultado = Object.entries(usuarios);
+    // console.log(resultado);
+
     Object.entries(usuarios).forEach(([id, { nome, idade }]) => {
       const li = document.createElement("li"); // Cria item da lista
       li.innerHTML = `
